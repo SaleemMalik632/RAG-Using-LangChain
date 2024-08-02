@@ -1,0 +1,4 @@
+# Ignore credentials and token files
+
+./Agent Email Sender/credentials.json
+./Agent Email Sendertoken.json
