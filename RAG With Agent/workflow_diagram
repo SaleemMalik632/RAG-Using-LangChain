@@ -1,0 +1,43 @@
+digraph "Workflow Diagram" {
+	graph [fontcolor="#2D3436" fontname="Sans-Serif" fontsize=15 label="Workflow Diagram" nodesep=0.60 pad=2.0 rankdir=LR ranksep=0.75 splines=ortho]
+	node [fixedsize=true fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 height=1.4 imagescale=true labelloc=b shape=box style=rounded width=1.4]
+	edge [color="#7B8894"]
+	"21b20fe8a73047d8a6c3bfa0c9bd965b" -> d02a297f5ccb4bad954b3180b7bf39da [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	cbee6cf376e642cdb8647ac6c374637c -> d02a297f5ccb4bad954b3180b7bf39da [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	b4170f6c594c4a41b3b0a822980fb444 -> d02a297f5ccb4bad954b3180b7bf39da [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	d02a297f5ccb4bad954b3180b7bf39da -> "7d8b74a957444dd88743d9b34bf87832" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	subgraph "cluster_Model 1: Keyword Extraction and Intersection" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="Model 1: Keyword Extraction and Intersection" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"21b20fe8a73047d8a6c3bfa0c9bd965b" [label="Available Keywords (Date-wise)" height=1.9 image="c:\Users\SONIC LAPTOPS\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/onprem/database\postgresql.png" shape=none]
+		cbee6cf376e642cdb8647ac6c374637c [label="Review Keywords (Date-wise)" height=1.9 image="c:\Users\SONIC LAPTOPS\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/onprem/database\postgresql.png" shape=none]
+		b4170f6c594c4a41b3b0a822980fb444 [label="Scraping Keywords (Date-wise)" height=1.9 image="c:\Users\SONIC LAPTOPS\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/onprem/database\postgresql.png" shape=none]
+		d02a297f5ccb4bad954b3180b7bf39da [label="Keyword Intersection & Date Binding" height=1.9 image="c:\Users\SONIC LAPTOPS\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/onprem/analytics\hadoop.png" shape=none]
+		"7d8b74a957444dd88743d9b34bf87832" [label="Latest Keywords (Date-wise)" height=1.9 image="c:\Users\SONIC LAPTOPS\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/onprem/database\postgresql.png" shape=none]
+	}
+	"7d8b74a957444dd88743d9b34bf87832" -> "2461ad706e974f7b878752084d7370d3" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"049561f699c544ed94b83203cb966c3c" -> "2461ad706e974f7b878752084d7370d3" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"2461ad706e974f7b878752084d7370d3" -> f7ada3ea7ee749ba97d26172e4d4aca8 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	f7ada3ea7ee749ba97d26172e4d4aca8 -> c94e2e191d764101871079ae6335a219 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	c94e2e191d764101871079ae6335a219 -> "89dec1d886ed4537a7d3e40fbba0e681" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	subgraph "cluster_Model 2: ETL Pipeline and Categorization" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="Model 2: ETL Pipeline and Categorization" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"049561f699c544ed94b83203cb966c3c" [label=Categories height=1.9 image="c:\Users\SONIC LAPTOPS\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/onprem/database\postgresql.png" shape=none]
+		"2461ad706e974f7b878752084d7370d3" [label="ETL Pipeline & Feature Extraction" height=1.9 image="c:\Users\SONIC LAPTOPS\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/onprem/workflow\airflow.png" shape=none]
+		f7ada3ea7ee749ba97d26172e4d4aca8 [label=Categorization height=1.9 image="c:\Users\SONIC LAPTOPS\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/blank\blank.png" shape=none]
+		c94e2e191d764101871079ae6335a219 [label="Machine Learning Model" height=1.9 image="c:\Users\SONIC LAPTOPS\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/blank\blank.png" shape=none]
+		"89dec1d886ed4537a7d3e40fbba0e681" [label="Categorized Keywords" height=1.9 image="c:\Users\SONIC LAPTOPS\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/onprem/database\postgresql.png" shape=none]
+	}
+	"89dec1d886ed4537a7d3e40fbba0e681" -> "7d896dd32e944e0fbb4bf89ab02c833f" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"7d896dd32e944e0fbb4bf89ab02c833f" -> "1d7c66e774cb45f58c6cd302f5e95979" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"1d7c66e774cb45f58c6cd302f5e95979" -> a8880f07b0f144269b2f6b18169e0d85 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	a8880f07b0f144269b2f6b18169e0d85 -> be357d5e3ac948ba96072be2b827981e [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	a8880f07b0f144269b2f6b18169e0d85 -> "514be2a03f6a425d8b0a88531d556193" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	subgraph "cluster_Model 3: Feedback Loop and Validation" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="Model 3: Feedback Loop and Validation" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"7d896dd32e944e0fbb4bf89ab02c833f" [label="Validation Check" height=1.9 image="c:\Users\SONIC LAPTOPS\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/blank\blank.png" shape=none]
+		"1d7c66e774cb45f58c6cd302f5e95979" [label="Feedback Collection" height=1.9 image="c:\Users\SONIC LAPTOPS\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/blank\blank.png" shape=none]
+		a8880f07b0f144269b2f6b18169e0d85 [label="Continuous Improvement" height=1.9 image="c:\Users\SONIC LAPTOPS\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/generic/blank\blank.png" shape=none]
+		be357d5e3ac948ba96072be2b827981e [label="Feedback Loop Data" height=1.9 image="c:\Users\SONIC LAPTOPS\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/onprem/database\postgresql.png" shape=none]
+		"514be2a03f6a425d8b0a88531d556193" [label="Refined Keyword Categorization" height=1.9 image="c:\Users\SONIC LAPTOPS\AppData\Local\Programs\Python\Python311\Lib\site-packages\resources/onprem/database\postgresql.png" shape=none]
+	}
+}
