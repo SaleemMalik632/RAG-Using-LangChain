@@ -4,10 +4,11 @@ This repository contains three implementations of Retrieval-Augmented Generation
 
 ## Table of Contents
 
-1. [Basic RAG](#basic-rag)
-2. [Advanced RAG](#advanced-rag)
-3. [Agent RAG Using TAVILY Search Engine](#agent-rag-using-TAVILY-search-engine)
-4. [Setup and Installation](#setup-and-installation) 
+1. [Basic RAG](./Basic%20RaG/Basic%20RAG.ipynb)
+2. [Advanced RAG](./Advance%20RAG/Advance%20RAG%20Saleem%20Malik.ipynb)
+3. [Agent RAG Using TAVILY Search Engine](./RAG%20With%20Agent/RAG_Langchain_Agents%20%20with%20PDF%20Data.ipynb)
+4. [Setup and Installation](./requirements.txt)
+ 
 
 ## Basic RAG
 
