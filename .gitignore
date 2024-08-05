@@ -1,4 +1,46 @@
 # Ignore credentials and token files
+*.json
+*.env
 
-.json
-# ./Agent Email Sender/token.json
+# Ignore specific directories
+Agent Email Sender/credentials.json
+Agent Email Sender/token.json
+
+# Ignore common sensitive files
+*.key
+*.pem
+*.p12
+*.crt
+*.cer
+*.der
+*.pfx
+
+# Ignore configuration files
+*.config
+*.conf
+*.ini
+*.yml
+*.yaml
+
+# Ignore log files
+*.log
+
+# Ignore database files
+*.sqlite
+*.db
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
